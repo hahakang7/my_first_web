@@ -19,10 +19,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>제주도!</title>
+
+    <style>
+      body {
+        margin: 0;
+      }
+      h1 {
+        border-bottom: 1px solid black;
+        text-align: center;
+        margin-top: 8px;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+      }
+      a {
+        text-decoration: none;
+      }
+      nav {
+        border-right: 1px solid black;
+        width: 140px;
+      }
+      #nav-head {
+        text-align: center;
+        margin-bottom: 0;
+      }
+      ol{
+        margin-top: 5px;
+      }
+      ol:hover{
+        
+      }
+      .divide{
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      @media(max-width:750px)
+      {
+        .divide{
+        display: block;
+      }
+      nav {
+        border-right: none;
+    }
+    </style>
   </head>
   <body>
-    <h1>제주도</h1>
-    <hr />
+    <header>
+      <h1>제주도</h1>
+    </header>
+    <div class="divide">
+    <nav>
+      <div class="navigation">
+        <h3 id="nav-head">여가거리</h3>
+        <ol>
+           
+           <a href="food.html">
+           <li>음식</li> 
+           </a>
+          </a>
+          <a href="active.html"><li>활동</li></a>
+          <a href="guitar.html"><li>문화</li></a>
+        </ol>
+      </div>
+    </nav>
+<section>
     <h2>소개</h2>
     <p>
       제주도(濟州島, 영어: Jeju-do)는 대한민국의 남해에 위치한 섬이자
@@ -61,21 +120,8 @@
       용암분출이 있었던 것으로 확인되고 있다.
     </p>
     <img src="photo/jeju.jpg" alt="" />
-
-    <h2>여가거리</h2>
-    <ol>
-      <a href="food.html"
-        ><h5>
-          <li>음식</li>
-        </h5></a
-      >
-      <a href="active.html"
-        ><h5><li>활동</li></h5></a
-      >
-      <a href="guitar.html"
-        ><h5><li>문화</li></h5></a
-      >
-    </ol>
+  </section>
+</div>
     <p>
       <iframe
         width="560"
