@@ -11,6 +11,24 @@
     <title>제주도 문화유산</title>
   </head>
   <body>
+    <input type="button" value="day" class="day_night" onclick="
+      var target = document.querySelector('body')
+      if (this.value==='day'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value='night';
+      }
+      else if(this.value==='night'){
+        target.style.backgroundColor='rgb(3,107,63)';
+        target.style.color='black';
+        this.value='konkuk';
+      }
+      else{
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value='day';
+      }      
+      ">
     <h1>제주도의 문화유산</h1>
     <hr />
     <ul>

@@ -27,7 +27,7 @@
       h1 {
         border-bottom: 1px solid black;
         text-align: center;
-        margin-top: 8px;
+        margin-top: 0px;
         margin-bottom: 0;
         padding-bottom: 10px;
       }
@@ -45,40 +45,54 @@
       ol{
         margin-top: 5px;
       }
-      ol:hover{
-        
-      }
       .divide{
         display: grid;
         grid-template-columns: 150px 1fr;
       }
-      @media(max-width:750px)
-      {
+      @media(max-width:750px){
         .divide{
         display: block;
       }
       nav {
         border-right: none;
     }
+  }
     </style>
   </head>
-  <body>
-    <header>
+  <body>    
+        <header>      
+      <input type="button" value="day" class="day_night" onclick="
+      var target = document.querySelector('body')
+      if (this.value==='day'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value='night';
+      }
+      else if(this.value==='night'){
+        target.style.backgroundColor='rgb(3,107,63)';
+        target.style.color='black';
+        this.value='konkuk';
+      }
+      else{
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value='day';
+      }      
+      ">
       <h1>제주도</h1>
     </header>
     <div class="divide">
     <nav>
       <div class="navigation">
         <h3 id="nav-head">여가거리</h3>
-        <ol>
-           
-           <a href="food.html">
-           <li>음식</li> 
-           </a>
+        <lo>
+          <a href="food.html">
+          <li>음식</li> 
+          </a>
           </a>
           <a href="active.html"><li>활동</li></a>
           <a href="guitar.html"><li>문화</li></a>
-        </ol>
+        </lo>
       </div>
     </nav>
 <section>
@@ -133,46 +147,5 @@
         allowfullscreen
       ></iframe>
     </p>
-    <div id="disqus_thread"></div>
-    <script>
-      /**
-       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-      /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-      (function () {
-        // DON'T EDIT BELOW THIS LINE
-        var d = document,
-          s = d.createElement("script");
-        s.src = "https://jeju-8.disqus.com/embed.js";
-        s.setAttribute("data-timestamp", +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript
-      >Please enable JavaScript to view the
-      <a href="https://disqus.com/?ref_noscript"
-        >comments powered by Disqus.</a
-      ></noscript
-    >
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-      var Tawk_API = Tawk_API || {},
-        Tawk_LoadStart = new Date();
-      (function () {
-        var s1 = document.createElement("script"),
-          s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = "https://embed.tawk.to/640ae6f331ebfa0fe7f1bef8/1gr59ca8s";
-        s1.charset = "UTF-8";
-        s1.setAttribute("crossorigin", "*");
-        s0.parentNode.insertBefore(s1, s0);
-      })();
-    </script>
-    <!--End of Tawk.to Script-->
-  </body>
+    </body>
 </html>
