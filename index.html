@@ -12,14 +12,22 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-RRPHT7YYHN");
     </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="774779324345-qofqh8v7apup8ln6geop0q8o2od2l8dm.apps.googleusercontent.com">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>제주도!</title>
-
+    <script>function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }</script>
+    
     <style>
       body {
         margin: 0;
@@ -84,6 +92,7 @@
     <div class="divide">
     <nav>
       <div class="navigation">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <h3 id="nav-head">여가거리</h3>
         <lo>
           <a href="food.html">
@@ -147,5 +156,6 @@
         allowfullscreen
       ></iframe>
     </p>
+    
     </body>
 </html>
